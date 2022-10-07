@@ -1,6 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next';
 import { useUser, withApiAuthRequired } from '@auth0/nextjs-auth0';
+import Link from 'next/link';
 
 
 interface Props {
@@ -22,7 +23,7 @@ const dashboard: NextPage<Props> = ({ data }) => {
         return(
             <>
                 <p>Please Login</p>
-                <a href='/api/auth/login'>Go to Login</a>
+                <Link href='/api/auth/login'>Go to Login</Link>
             </>
             
         ) 
