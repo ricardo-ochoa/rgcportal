@@ -11,7 +11,7 @@ interface Props {
     }[];
 }
 
-const dashboard: NextPage<Props> = ({ data }) => {
+const Dashboard: NextPage<Props> = ({ data }) => {
 
     const { user, error, isLoading } = useUser();
 
@@ -40,4 +40,4 @@ const dashboard: NextPage<Props> = ({ data }) => {
   )
 }
 
-export default dashboard;
+export default Dashboard;
