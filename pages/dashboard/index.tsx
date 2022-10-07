@@ -34,7 +34,7 @@ const dashboard: NextPage<Props> = ({ data }) => {
   return (
     <div>
         <h1>Dashboard</h1>
-        <a href='/api/auth/logout'> Salir </a>
+        <Link href='/api/auth/logout'> Salir </Link>
         
     </div>
   )
