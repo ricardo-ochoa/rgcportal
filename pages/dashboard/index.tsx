@@ -4,14 +4,14 @@ import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 
 
-interface Props {
-    data:{
-        id: number;
-        temperature: number;
-    }[];
-}
+// interface Props {
+//     data:{
+//         id: number;
+//         temperature: number;
+//     }[];
+// }
 
-const Dashboard: NextPage<Props> = ({ data }) => {
+const Dashboard: NextPage = () => {
 
     const { user, error, isLoading } = useUser();
 
@@ -21,10 +21,10 @@ const Dashboard: NextPage<Props> = ({ data }) => {
 
     if ( !user ) {
         return(
-            <>
+            <div>
                 <p>Please Login</p>
                 <Link href='/api/auth/login'>Go to Login</Link>
-            </>
+            </div>
             
         ) 
     }
@@ -34,7 +34,6 @@ const Dashboard: NextPage<Props> = ({ data }) => {
     <div>
         <h1>Dashboard</h1>
         <Link href='/api/auth/logout'> Salir </Link>
-        
     </div>
   )
 }
