@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next';
-import { useUser, withApiAuthRequired } from '@auth0/nextjs-auth0';
+import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 
 
@@ -28,7 +28,6 @@ const Dashboard: NextPage<Props> = ({ data }) => {
             
         ) 
     }
-
 
 
   return (
